@@ -96,10 +96,9 @@ exports.intent = function () {
 
 
 ## Configuration
-La configuration du plugin se fait dans le fichier `Avatar-Serveur/plugins/tvSchedule/tvSchedule.prop`
 
 ### Liste complète des chaines TV
-La totalité des chaines sont définies dans le fichier `Avatar-Serveur/plugins/tvSchedule/tvChannels.js` et sert à tvSchedule pour savoir quelles chaines sont à récupérer.
+Toutes les chaines sont définies dans le fichier `Avatar-Serveur/plugins/tvSchedule/tvChannels.js` et sert à tvSchedule pour savoir quelles chaines sont à récupérer.
 
 Le nom des chaines est à ajouter/modifier à la position exacte qui correspond dans la liste des chaines de la box Free.
 **Attention**:
@@ -110,11 +109,12 @@ Le nom des chaines est à ajouter/modifier à la position exacte qui correspond 
 Les chaines dont Avatar vous donne les programmes sont définies dans le fichier `Avatar-Serveur/plugins/tvSchedule/tvSchedule.prop` dans le tableau `MyChannelId`
 
 ```xml
-"MyChannelId" : ["TF1","France 2","France 3","Arte","M6","France 5","C8","W9","TMC",
-				"NT1","NRJ 12","France 4","RMC Découverte","RTL 9","CStar",
-				"AB Moteurs","National Geographic","Paramount Channel","Voyage","TV5 Monde","Nat Geo Wild",
-				"Discovery Science","Histoire","Toute l'histoire","Science & Vie TV","Syfy","AB 1",
-				"Eurosport 1","Eurosport 2"],
+"MyChannelId" : [
+"TF1","France 2","France 3","Arte","M6","France 5","C8","W9","TMC",
+"NT1","NRJ 12","France 4","RMC Découverte","RTL 9","CStar",
+"AB Moteurs","National Geographic","Paramount Channel","Voyage","TV5 Monde","Nat Geo Wild",
+"Discovery Science","Histoire","Toute l'histoire","Science & Vie TV","Syfy","AB 1",
+"Eurosport 1","Eurosport 2"],
 ```		
 
 Il n'y a pas d'ordres dans ce tableau, ajoutez les chaines à la suite des autres.
@@ -132,12 +132,12 @@ Pour récupérer les programmes TV, la syntaxe est:
 
 Une période n'est pas obligatoire, si elle n'est pas définie, le plugin retourne les programmes du moment.
 
-Le "what is" peut être traduit de nombreuses façons en Français . Voici quelques exemples de ce que l'on peut dire:
+Le **"what is"** peut être traduit de nombreuses façons en Français . Voici quelques exemples de ce que l'on peut dire:
 
 - Qu'est ce qu'il y a à la télévision
-- Qu'est ce qu'il y a à la télévision en ce moment
+- Qu'est ce qu'il y a à la tv en ce moment
 - Il y a quoi à la télévision ce soir
-- Quels sont les programmes à la télévision**|**tv ce soir
+- Quels sont les programmes à la télévision ce soir
 - Donne-moi ce qu'il y a à la télévision ce soir
 - Tu peux me dire quel est le programme à la tv ce soir
 - Il y a quoi à la télévision en deuxième partie de soirée
@@ -148,7 +148,7 @@ Le "what is" peut être traduit de nombreuses façons en Français . Voici quelq
 Toutes les réponses aux questions sont disponibles dans plusieurs objets du fichier de propriétés.
 
 Après la recherche:
-- tvSchedule vous demande un type de programme pour qu'il vous ennumère ce qu'il a trouvé.
+- tvSchedule vous demande un type de programme pour qu'il vous énumère ce qu'il a trouvé.
 	- Vous avez toutes les réponses et les types de programmes possibles dans l'objet "askTVType".
 	- Par exemple, vous pouvez dire: "le cinéma", tvSchedule vous donnera alors tous les programmes de cinéma qu'il a trouvé.
 - Comme réponse vous pouvez dire une réponse de l'objet "askTVProgs".
@@ -163,9 +163,9 @@ Après la recherche:
 				- "Il est 20h50, tu m'as demandé de mettre Avatar" et changera la chaine de la freebox sur TF1.
 				- Le scénario est détruit automatiquement ensuite des scénarios du plugin scenariz.
 			- Si le programme est déjà démarrré, tvSchedule vous le notifie, répondez alors une réponse de "recordAlreadyStarted"
-		- **"rappelle-le moi"**: Ajoute ce programme dans vos favoris, lorsqu'il passera de nouveau, Avatar vous le signifiera si la télé est allumée. Si elle est éteinte, il l'enregistrera automatiquement.
+		- **"rappelle-le moi"**: Ajoute ce programme dans vos favoris et lorsqu'il passera de nouveau, Avatar vous le signifiera si la télé est allumée. Si elle est éteinte, il l'enregistrera automatiquement.
 			- Les commandes associées sont dans l'objet "askSetProgramTV"
-			- Par exemple, Avatar vous dira tout seul "J'ai trouvé un programme intéressant, Genuis sur National géographic, veux-tu que je le mette ?"
+			- Par exemple, Avatar vous dira tout seul "J'ai trouvé un programme intéressant, Genius sur National géographic, veux-tu que je le mette ?"
 			- Dites alors:
 				- **"Oui, s'il te plait"** => plugin freebox nécessaire
 				- **"non merci"** => Si vous ne voulez pas changer de chaine ou si vous n'avez pas le plugin freebox
@@ -184,7 +184,7 @@ Syntaxe:
 Commande:
 - Tu as enregistré des programmes ?
 
-Le plugin vous ennumère dans l'ordre des jours d'enregistrement ce qu'il a enregistré.
+Le plugin vous énumère dans l'ordre des jours d'enregistrement ce qu'il a enregistré.
 
 
 ### Supprimer les rappels de programmes
@@ -196,7 +196,7 @@ Syntaxe:
 Commande:
 - Supprime des programmes
 
-Vous rentrez alors dans un jeu de questions/réponses ou le plugin vous liste vos rappels et vous demande si il faut les supprimer ou non.
+Vous entrez alors dans un jeu de questions/réponses ou le plugin vous liste vos rappels et vous demande si il faut les supprimer ou non.
 
 Retrouvez ce que vous pouvez dire dans l'objet "askRemoveProgs" du fichier de propriétés.
 
