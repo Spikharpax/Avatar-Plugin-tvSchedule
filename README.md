@@ -67,8 +67,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 ```
 
 - Editez le fichier `Avatar-Serveur/ia/index.js`
-	- Ajoutez dans l'import des intents, l'intent `music`
-	- Ajoutez dans l'import des actions, l'action `Sonos`
+	- Ajoutez dans l'import des intents, l'intent `tvPrograms`
+	- Ajoutez dans l'import des actions, l'action `programmeTV`
 	- Ajoutez dans la fonction export.intent(), l'association intention-action
 
 ```javascript
