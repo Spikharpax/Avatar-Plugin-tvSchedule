@@ -128,13 +128,14 @@ Les règles sont définies dans les tableaux suivants:
 
 ### Programmes TV
 Pour récupérer les programmes TV, la syntaxe est:
-- **what is** ... **tv|television** ... **[une période du tableau "periods"]**
+- **what is** ... **tv|television** ... **[un jour du tableau "jours"]** ... **[une période du tableau "periods"]**
 
-Une période n'est pas obligatoire, si elle n'est pas définie, le plugin retourne les programmes du moment.
+Une période ou un jour n'est pas obligatoire, si rien n'est défini, le plugin retourne les programmes du moment.
 
 Le **"what is"** peut être traduit de nombreuses façons en Français . Voici quelques exemples de ce que l'on peut dire:
 
 - Qu'est ce qu'il y a à la télévision
+- il y a quoi à la télévision aujourd'hui
 - Qu'est ce qu'il y a à la tv en ce moment
 - Il y a quoi à la télévision ce soir
 - Quels sont les programmes à la télévision ce soir
@@ -143,6 +144,7 @@ Le **"what is"** peut être traduit de nombreuses façons en Français . Voici q
 - Il y a quoi à la télévision en deuxième partie de soirée
 - Qu'est ce qu'il y a à la télévision de 22h à minuit
 - Dis-nous ce qu'il y a à la télévision de 10h à midi
+- Qu'est ce qu'il y a à la télévision mardi de 14h à 16h
 
 ### Jeux de questions/réponses du programme télé
 Toutes les réponses aux questions sont disponibles dans plusieurs objets du fichier de propriétés.
