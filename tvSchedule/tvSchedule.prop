@@ -1,0 +1,112 @@
+{
+  "modules" : { 
+    "tvSchedule" : {
+      "description": "Get TV programs",
+      "version": "1.0",
+	  "debug": true,
+	  "default_FilmDuration": "02:30",
+	  "default_Duration": "01:30",
+	  "period": "actuellement",
+	  "jour": "aujourd'hui",
+	  "bouquet": "documentaire,generaliste,cinema,sport,tnt",
+	  "locale": "FR_fr",
+	  "jours" : "aujourd'hui,lundi,mardi,mercredi,jeudi,vendredi,samedi,dimanche",
+	  "periods" : {
+		"actuellement" : ["en ce moment"],
+		"soiree" : ["ce soir"],
+		"soiree2" : ["en deuxième partie de soirée"],
+		"-1" : ["minuit à 2h","minuit à deux heures"],
+		"-2" : ["2h à 4h","deux heures à quatre heures"],
+		"-3" : ["4 h à 6h","quatre heures à six heures"],
+		"-4" : ["6h à 8h","six heures à huit heures"],
+		"-5" : ["8h à 10h","huit heures à dix heures"],
+		"-6" : ["10h à midi","dix heures à midi"],
+		"-7" : ["midi à 14h","midi à quatorze heures"],
+		"-8" : ["14h à 16h","quatorze heures à seize heures"],
+		"-9" : ["16h à 18h","seize heures à dix huit heures"],
+		"-10" : ["18h à 20h","dix huit heures à vingt heures"],
+		"-11" : ["20h à 22h","vingt heures à vingt deux heures"],
+		"-12" : ["22h à minuit","vingt deux à minuit"]
+	  },
+	  "rules" : {
+		"tvProgram" : ["what is * (tv|television)","what * (tv|television)"],
+		"recorded" : ["~record~ * (programs|program)","recorded programs","recorded program","record programs","record program"],
+		"remove" : ["~remove~ (programs|program)","~delete~ (programs|program)","deletes programs","deletes program"]
+	  },
+	  "MyChannelId" : ["TF1","France 2","France 3","Arte","M6","France 5","C8","W9","TMC",
+						"NT1","NRJ 12","France 4","RMC Découverte","RTL 9","CStar",
+						"AB Moteurs","National Geographic","Paramount Channel","Voyage","TV5 Monde","Nat Geo Wild",
+						"Discovery Science","Histoire","Toute l'histoire","Science & Vie TV","Syfy","AB 1",
+						"Eurosport 1","Eurosport 2"],
+	  "askSetProgramTV"	: { 
+			"oui vas-y" : "yes",
+			"oui s'il te plait" : "yes",
+			"non enregistre" : "record",
+			"enregistre-le" : "record",
+			"qu'est ce que je peux dire" : "sommaire",
+			"non merci": "cancel",
+			"non c'est bon": "cancel"
+	  },
+	  "askTVType"	: { 
+			"qu'est ce que je peux dire" : "sommaire",
+			"les documentaires": "Documentaire",
+			"le Sport": "Sport",
+			"les Téléfilms" : "Téléfilm",
+			"la jeunesse" : "Jeunesse",
+			"les Divertissements": "Divertissement",
+			"l'Information": "Information",
+			"la Culture" : "Culture",
+			"les Séries" : "Série",
+			"le cinéma": "Film",
+			"les non classé": "otherType",
+			"terminé" : "cancel",
+			"annule" : "cancel",
+			"merci sarah" : "Sarahcancel",
+			"non merci" : "Sarahcancel"
+	  },
+	  "askTVProgs" : { 
+			"qu'est ce que je peux dire" : "sommaire",
+			"répète": "again",
+			"encore": "again",
+			"donne-moi le résumé": "resume",
+			"suivant" : "next",
+			"passe au suivant" : "next",
+			"next" : "next",
+			"à quelle heure" : "hour",
+			"précédent" : "previous",
+			"programme-le": "programme",
+			"enregistre-le": "record",
+			"met-le": "setIt",
+			"mets le": "setIt",
+			"rappelle-le moi": "recorder",
+			"reviens aux types": "done",
+			"merci sarah" : "Sarahcancel",
+			"terminé" : "cancel"
+	  },
+	  "recordAlreadyStarted": { 
+			"oui vas-y" : "yes",
+			"oui s'il te plait" : "yes",
+			"non merci": "cancel",
+			"terminé" : "cancel",
+			"annule" : "cancel"
+	  },
+	  "askRemoveProgs" : { 
+			"oui vas-y" : "yes",
+			"oui s'il te plait" : "yes",
+			"oui supprime-le" : "yes",
+			"suivant" : "no",
+			"non suivant" : "no",
+			"terminé": "cancel",
+			"merci sarah" : "cancel"
+	  }
+    }
+  },
+  "cron" : {
+    "tvSchedule" :   { 
+	  "name"       : "tvSchedule",
+      "description": "tvSchedule Cron",
+	  "version": "1.0",
+      "time"   : "0 */2 * * *"
+    }
+  }
+}
