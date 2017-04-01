@@ -30,7 +30,7 @@
 	  },
 	  "rules" : {
 		"tvProgram" : ["what is * (tv|television)","what * (tv|television)"],
-		"recorded" : ["~record~ * (programs|program)","recorded programs","recorded program","record programs","record program"],
+		"recorded" : ["(programs|program) * ~record~","~record~ * (programs|program)","recorded programs","recorded program","record programs","record program"],
 		"remove" : ["~remove~ (programs|program)","~delete~ (programs|program)","deletes programs","deletes program"]
 	  },
 	  "MyChannelId" : ["TF1","France 2","France 3","Arte","M6","France 5","C8","W9","TMC",

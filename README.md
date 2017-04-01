@@ -183,8 +183,10 @@ Elle vous permet de savoir quels sont les programmes qui ont été enregistrés 
 Syntaxe:
 - **record** ... **programs|program**
 
-Commande:
+Exemple:
 - Tu as enregistré des programmes ?
+- Dis-moi si tu as enregistré des programmes ?
+- Il y a des programmes d'enregistré ?
 
 Le plugin vous énumère dans l'ordre des jours d'enregistrement ce qu'il a enregistré.
 
