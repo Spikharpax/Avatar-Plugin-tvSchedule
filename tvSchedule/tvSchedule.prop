@@ -2,7 +2,7 @@
   "modules" : { 
     "tvSchedule" : {
       "description": "Get TV programs",
-      "version": "1.0",
+      "version": "1.1",
 	  "debug": true,
 	  "default_FilmDuration": "02:30",
 	  "default_Duration": "01:30",
@@ -36,8 +36,8 @@
 	  "MyChannelId" : ["TF1","France 2","France 3","Arte","M6","France 5","C8","W9","TMC",
 						"NT1","NRJ 12","France 4","RMC Découverte","RTL 9","CStar",
 						"AB Moteurs","National Geographic","Paramount Channel","Voyage","TV5 Monde","Nat Geo Wild",
-						"Discovery Science","Histoire","Toute l'histoire","Science & Vie TV","Syfy","AB 1",
-						"Eurosport 1","Eurosport 2"],
+						"Discovery Science","Histoire","Toute l'histoire","Science & Vie TV","AB 1",
+						"Eurosport 1","Eurosport 2","L'Equipe 21"],
 	  "askSetProgramTV"	: { 
 			"oui vas-y" : "yes",
 			"oui s'il te plait" : "yes",
@@ -74,14 +74,15 @@
 			"next" : "next",
 			"à quelle heure" : "hour",
 			"précédent" : "previous",
-			"programme-le": "programme",
-			"enregistre-le": "record",
-			"met-le": "setIt",
+			"programme le": "programme",
+			"enregistre le": "record",
 			"mets le": "setIt",
-			"rappelle-le moi": "recorder",
+			"tu peux le mettre": "setIt",
+			"rappelle le moi": "recorder",
 			"reviens aux types": "done",
 			"merci sarah" : "Sarahcancel",
-			"terminé" : "cancel"
+			"non c'est bon" : "cancel",
+			"terminer" : "cancel"
 	  },
 	  "recordAlreadyStarted": { 
 			"oui vas-y" : "yes",

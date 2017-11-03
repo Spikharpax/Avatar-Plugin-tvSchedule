@@ -124,7 +124,9 @@ var TVExec = function (client, title, hour, duration, channelID, channelName) {
 	isPlayerOn ( function (state) {
 		switch (state) {
 			case true: 
-				Avatar.askme(msg.localized('TVProgramFound').replace('%s',title).replace('%c',channelName) , client, 
+			    var tts = msg.localized('TVProgramFound');
+				tts = tts.split('|')[Math.floor(Math.random() * tts.split('|').length)].replace('%s',title).replace('%c',channelName);
+				Avatar.askme(tts , client, 
 				Config.modules.tvSchedule.askSetProgramTV
 				, 0, function(answer, end){
 					switch (answer) {

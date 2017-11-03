@@ -34,7 +34,7 @@ var messages = {
 	alreadyStarted: "Ce programme est déjà commencé, veux-tu que je le mette ?",
 	rememberProgram: "Rappel de %s à %d",
 	cron_saved: "%s sauvegardé",
-	TVProgramFound: "J'ai trouvé un programme intéréssant. %s sur %c. Veux-tu que je le mette ?",
+	TVProgramFound: "Stéphane, j'ai trouvé un programme intéréssant. %s sur %c. Veux-tu que je le mette ?|Stèphe, y'a un truc intéressant qui passe. %s sur %c. Ca te branche ?",
 	askRecordProgram: "D'accord, je dois intérrompre ton programme 1 minute le temps de le programmer.",
 	tvFoundSommaire: "Oui vas-y ou oui s'il te plait. Non enregistre. Non c'est bon ou non merci.",
 	recordedProgram: "J'ai enregistré %d programmes",

@@ -29,71 +29,8 @@ Il permet de demander à Avatar le programme tv:
 
 
 ## Installation
-
 - Dézippez le fichier `Avatar-Plugin-tvSchedule-Master.zip` dans un répertoire temporaire
 - Copiez le répertoire `tvSchedule` dans le répertoire `Avatar-Serveur/plugins`
-- Copiez le fichier `intents/intent.programmes.tv.js` dans le répertoire `Avatar-Serveur/ia/intents/`
-- Copiez le fichier `actions/action.programmes.tv` dans le répertoire `Avatar-Serveur/ia/actions/`
-- Editez le fichier `Avatar-Serveur/ia/actions/index.js`, allez à la fin du fichier et juste avant `function _interopRequireDefault(obj)` ajoutez les lignes suivantes
-
-```javascript
-var _actionProgramsTV = require('./action.programmes.tv');
-
-Object.defineProperty(exports, 'programmeTV', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_actionProgramsTV).default;
-  }
-});
-
-// Fin du fichier...
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-```
-
-- Editez le fichier `Avatar-Serveur/ia/intents/index.js`, allez à la fin du fichier et juste avant `function _interopRequireDefault(obj)` ajoutez les lignes suivantes
-
-```javascript
-var _intentProgramsTV = require('./intent.programmes.tv');
-
-Object.defineProperty(exports, 'tvPrograms', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_intentProgramsTV).default;
-  }
-});
-
-// Fin du fichier...
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-```
-
-- Editez le fichier `Avatar-Serveur/ia/index.js`
-	- Ajoutez dans l'import des intents, l'intent `tvPrograms`
-	- Ajoutez dans l'import des actions, l'action `programmeTV`
-	- Ajoutez dans la fonction export.intent(), l'association intention-action
-
-```javascript
-import { tvPrograms, music, weather, hour,  blague, manageAvatar, shoppingList, translate, lastAction, intentEnd} from './intents';
-import { programmeTV, Sonos, forecastMsn, forecastYahoo, worldHour, jokeOfDay, avatarRules, shopping, translator, backupAction, actionEnd} from './actions';
-
-
-exports.intent = function () {
-
-	// Configure the intents
-	ava
-	 .intent(translate, translator)
-	 .intent(hour, worldHour)
-	 .intent(weather, [forecastYahoo, forecastMsn])
-	 // Déclaration tvSchedule
-	 .intent(tvPrograms, programmeTV)
-	 .intent(music, Sonos)
-	 .intent(blague, jokeOfDay)
-	 .intent(manageAvatar, avatarRules)
-	 .intent(shoppingList, shopping)
-	 .intent(lastAction, backupAction)
-	 .intent(intentEnd, actionEnd)  // Toujours à la fin, controle si une règle est passée
-}
-```
-
 
 ## Configuration
 
@@ -211,9 +148,10 @@ Les tts vocalisés par Avatar sont disponibles dans le fichier  `Avatar-Serveur/
 
 Le rappel des programmes est vocalisé dans la pièce courante et le client Avatar associé. Si vous avez plusieurs télévisions, par exemple une dans le salon et une autre dans une chambre, Avatar se sert de la variable `Avatar.currentRoom` pour trouver la pièce où il doit faire son rappel.
 
-
-
    
 ## Versions
+Version 1.1 (03-11-2017)
+- Les fichiers intent et action déplacés dans le répertoire du plugin. Chargés automatiquement (Avatar serveur 0.1.5)
+
 Version 1.0 
 - Version Released
