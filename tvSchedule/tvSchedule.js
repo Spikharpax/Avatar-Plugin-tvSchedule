@@ -521,10 +521,10 @@ var TvCron = function (client, program, callback) {
 var isPlayerOn = function (callback) {
 	
 	if (!Avatar.exists('freebox'))
-		callback(-1);
+		return callback(-1);
 		
 	var token = require('../freebox/node_modules/token/token')();
-	token.PlayerOn(Config.modules.freebox.app_token, Config.modules.freebox.app_id, Config.modules.freebox.app_version, function(state) {  
+	token.PlayerOn(Config.modules.freebox.auth.app_token, Config.modules.freebox.auth.app_id, Config.modules.freebox.auth.app_version, function(state) {  
 		if (state == -1) {
 			error('il n\'y a pas de jeton pour la freebox');
 			return callback(-1);

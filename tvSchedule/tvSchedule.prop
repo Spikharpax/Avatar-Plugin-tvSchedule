@@ -2,7 +2,7 @@
   "modules" : { 
     "tvSchedule" : {
       "description": "Get TV programs",
-      "version": "1.1",
+      "version": "1.2",
 	  "debug": true,
 	  "default_FilmDuration": "02:30",
 	  "default_Duration": "01:30",

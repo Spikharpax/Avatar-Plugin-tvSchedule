@@ -150,6 +150,9 @@ Le rappel des programmes est vocalisé dans la pièce courante et le client Avat
 
    
 ## Versions
+Version 1.2 (02-04-2018)
+- Modification du test pour la freebox (freebox 1.2)
+
 Version 1.1 (03-11-2017)
 - Les fichiers intent et action déplacés dans le répertoire du plugin. Chargés automatiquement (Avatar serveur 0.1.5)
 
